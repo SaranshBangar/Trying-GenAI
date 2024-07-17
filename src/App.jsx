@@ -37,7 +37,7 @@ function App() {
   const handleCopy = () => {
     navigator.clipboard.writeText(text)
       .then (() => {
-        alert("Text copied to clipboard");
+        alert("Text copied to clipboard!");
       })
       .catch (e => {
         console.log(e);
