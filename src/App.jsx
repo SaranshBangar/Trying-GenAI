@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import API_KEY from "./.env";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,6 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const API_KEY = "AIzaSyCUfopTNKCnt2pjEORnLmp5HomPZghvvMA";
     const genAI = new GoogleGenerativeAI(API_KEY);
     const updatedPrompt = `Remember, your name is BangerAI and you are acting as an AI Writing Assistant. I will provide you with a prompt, the desired word limit, and the number of paragraphs to generate. The prompt can be anything random, and you should create an essay based on it. The word count should be approximately close to the specified limit. After every paragraph, include an extra line for clarity. Please note that formatting like bold, italics, bullet points, or emojis is not allowed. If no prompt is provided, respond with 'Please provide a prompt.' Currently, you are speaking to the developer, but your responses will be read by the general public, who may not be technically savvy. Remember to include the extra line. Got it? Here is your prompt -> ${prompt}, the word limit -> ${wordLimit}, and the paragraph number -> ${paragraph}.`
 
