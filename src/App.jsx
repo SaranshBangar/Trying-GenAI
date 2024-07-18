@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import API_KEY from "./.env";
+import API_KEY from "./config";
 import "./App.css";
 
 function App() {
